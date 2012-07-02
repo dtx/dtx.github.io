@@ -1,0 +1,28 @@
+$( "#draggable" ).draggable();
+$( "#infoDroppable" ).droppable({
+  	drop: function( event, ui ) {
+  		$("#infoWindow").slideDown('slow')
+  	},
+  	out: function( event, ui ) {
+        $("#infoWindow").slideUp('slow')
+  	}
+});
+
+$( "#projectsDroppable" ).droppable({
+  	drop: function( event, ui ) {
+  		$("#projectsWindow").slideDown('slow')
+  	},
+  	out: function( event, ui ) {
+        $("#projectsWindow").slideUp('slow')
+  	}
+});
+
+$( "#contactDroppable" ).droppable({
+  	drop: function( event, ui ) {
+  		$("#contactWindow").slideToggle('slow')
+  	},
+  	out: function( event, ui ) {
+        $("#contactWindow").slideToggle('slow')
+  	}
+});
+	
