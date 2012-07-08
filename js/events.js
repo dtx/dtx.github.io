@@ -1,4 +1,5 @@
 Backbone.pubSub = _.extend({}, Backbone.Events);
+window.data1;
  $(document).ready(function(){
     getContent = function(data){
       var str;
@@ -15,18 +16,27 @@ Backbone.pubSub = _.extend({}, Backbone.Events);
           });
       }
       else{
-        $.getJSON('https://api.github.com/users/dtx/repos?callback=?', function(data){
-        //$.getJSON('http://search.twitter.com/search.json?callback=?&q=arsene', function(data){
-          //i know for...in is bad for arrays and Strings, but idc atm.
-          var data1 = data['data'];
-          console.log(data1);
-          for( var i in data1){
-            var repo = new gitModel(data1[i]);
-            var gitV = new gitView({model:repo});
-            gitV.render();
+        if(window.data1 === undefined){
+          $.getJSON('https://api.github.com/users/dtx/repos?callback=?', function(data){
+            //i know for...in is bad for arrays and Strings, but idc atm.
+            window.data1 = data.data;
+            console.log(data1);
+            for( var i in data1){
+              var repo = new gitModel(data1[i]);
+              var gitV = new gitView({model:repo});
+              gitV.render();
+            }
+            $('#midText').fadeIn();
+          });
+        }
+       else{
+          for( var i in window.data1){
+              var repo = new gitModel(window.data1[i]);
+              var gitV = new gitView({model:repo});
+              gitV.render();
           }
           $('#midText').fadeIn();
-        });
+       }
       }
     });
 
