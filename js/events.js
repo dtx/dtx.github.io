@@ -15,11 +15,13 @@ Backbone.pubSub = _.extend({}, Backbone.Events);
           });
       }
       else{
-        $.getJSON('https://api.github.com/users/dtx/repos', function(data){
+        $.getJSON('https://api.github.com/users/dtx/repos?callback=?', function(data){
         //$.getJSON('http://search.twitter.com/search.json?callback=?&q=arsene', function(data){
           //i know for...in is bad for arrays and Strings, but idc atm.
-          for( var i in data){
-            var repo = new gitModel(data[i]);
+          var data1 = data['data'];
+          console.log(data1);
+          for( var i in data1){
+            var repo = new gitModel(data1[i]);
             var gitV = new gitView({model:repo});
             gitV.render();
           }
