@@ -1,0 +1,104 @@
+body {
+	height: 100%;
+	widht: 100%;
+	font-family: helvetica, arial, sans-serif;
+    padding-top:60px;
+    background-image:url('images/bg_falling.png');
+    background-color:#ffffff;
+    background-repeat:repeat-x;
+}
+
+#navlist li{
+  display: inline;
+  list-style-type:none;
+}
+#aboutmeContainer{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:14px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#midText{
+    font-size:16px;
+}
+.hero-unit{
+    background-color: rgba(255,255,255,0.5);
+}
+#footerText{
+    font-family: 'Josefin Sans', sans-serif;
+}
+#q {
+	color: #636363;
+}
+.aRepo{
+    list-style-type:none;
+}
+.repoDescription{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.repoName{
+    font-family: 'Press Start 2P', cursive;
+    font-size:16px;
+}
+#q, #button {
+	width: 250px;
+	outline: none;
+	padding: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background: rgba(255,255,255,.5);
+	font-size: 15px;
+	border-top: 1px solid #7098aa;
+	border-right: 1px solid #7098aa;
+	border-left: 1px solid #7098aa;
+	border-bottom: 1px solid #7faec4;
+	box-shadow: inset 0px 0px 5px rgba(0,0,0,.2);
+}
+
+#button {
+	height: 36px;
+	width: auto;
+	border: none;
+	background: #7098aa;
+	box-shadow: 0px 1px 0px rgba(0,0,0,.5);
+	color: #ffffff;
+}
+
+#tweets li {
+	width: 450px;
+	margin: 0px auto 10px;
+	display: block;
+	list-style: none inside none;
+	text-align: left;
+	text-shadow: none;
+	color: #444;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 10px;
+	border-bottom: 1px solid rgba(255,255,255,.7);
+	background: rgba(255,255,255,.3);
+	display: none;
+}
+
+#tweets li img {
+	float: left;
+}
+
+#tweets li div {
+	font-size: 11pt;
+	padding-top: 0px;
+}
+
+#tweets li a {
+	color: #666;
+	text-decoration: none;
+	padding-left: 5px;
+}
+
+#tweets li p {
+	font-size: 10pt;
+	margin-left: 50px;
+	margin-top: -16px;
+}

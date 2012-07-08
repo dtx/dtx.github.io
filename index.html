@@ -1,128 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|Questrial|Codystar|Emblema+One' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <title>Backbone Twitter</title>
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P|Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- Libraries: -->
+    <script src="js/lib/jquery-1.7.2.min.js"></script>
+	<script src="js/lib/underscore-1.3.2.min.js"></script>
+    <script src="js/lib/backbone-0.9.2.min.js"></script>
+    <script src="js/lib/date.min.js"></script>
+    <link href="twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='twitter-bootstrap-v2/docs/assets/css/bootstrap-responsive.css' rel='stylesheet'>
 
-    <title>Darshan Sanghani</title>
 
-    <!--[if IE]><script>/*@cc_on'abbr article aside audio canvas details figcaption figure footer header hgroup mark menu meter nav output progress section summary time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/</script><![endif]-->
-
-    <link type="text/css" href="css/touch.css" rel="stylesheet">
-    <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-24156308-1']);
-  _gaq.push(['_setDomainName', 'darshansanghani.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
   </head>
-
   <body>
-        <div id="menu">
-            <div id="infoDroppable" class="droppableArea">
-        	    <p>Who am i</p>
-            </div>
-            <div id="projectsDroppable" class="droppableArea">
-                <p>Projects</p>
-            </div>
-            <div id="contactDroppable" class="droppableArea">
-                <p>Get in touch</p>
-            </div>
-        <div id="player">
-            <audio id="audio" controls="controls">
-                <source src="ost.mp3" type="audio/mpeg" />
-                Your browser does not support the audio element.
-            </audio>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <ul class="nav">
+            <li class="active">
+              <a class="brand" href="/"><strong>darshan</strong>sanghani</a>
+            </li>
+            <li><a href='#'><img src='css/images/me.png'></a></li>
+          </ul>
+          <ul class='nav pull-right'>
+            <li>
+              <a target='_blank' href='http://dtx4.tumblr.com'>blog</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </div>
+
+    <div class='container-fluid'>
+      <div class='row-fluid'>
+        <div class='span3'>
+          <p id='aboutmeContainer'>
+          </p>
+          <p id='menuContainer'>
+          </p>
         </div>
-
-        <div class="content" align="center">
-            <div id="infoWindow" class="area" align="center">
-                <p id="info">Hi, my name is <strong>Darshan Sanghani.</strong></br></br>
-                When I was a kid, I used to think that there was someone on the other side of the computer screen, following my actions and changing the monitor accordingly. I wished to meet that person some day. Guess what? I did, and everyday I learn more about him. He fascinates me, drives me. If I am the brains then he is the muscle; till now it's been a <a href="http://www.youtube.com/watch?v=X_I4wtNPv5w" target="_blank">dream come true</a> relationship and I would love to keep this relation going for as long as I can.</br></br>
-                 I am not certain of the exact time I got into technology and programming, it just grew onto me. Since then I have made it a point to learn new technologies and apply them to make life simpler.We have been able to achieve so much in the past few years, why stop now? This isn't even the tip of the tip of the iceberg.</br></br>
-                 I am also a stoic believer of simplicity within technology. Current software industry is nothing but a bunch of blocks built upon the older ones. A smoother progress is only possible if the current interfaces are made as intuitive and extendible as possible. Hide the intricacies behind a facade, make it easy for the users to come up with new ideas for the software; that's what will prevent a software from dying.</br></br>
-                 Besides <a href="resume.pdf" target="_blank">working with technology</a>- I play the piano, I listen to classical and alternative rock, I swim, and seldom play basketball.</br></br>
-                 <strong>Let's talk</strong></br></br>
-                 I would love to get in touch with you, talk about technology, life, or any project you would like to collaborate on. You can <a href="mailto:dsangha2@illinois.edu">email</a> me or find other means of contact from the "Get in touch" option in the menu.</br></br>
-                </p>
-            </div>
-
-            <div id="projectsWindow" class="area" align="center">
-                <p style="font-family: 'Swanky and Moo Moo', cursive; text-align:center">Simplicity is prerequisite for reliability. The computing scientist's main challenge is not to get confused by the complexities of his own making.</p>
-                <p style="text-align: right">— E. W. Dijkstra</p></br>
-                <p style="text-align:left;">
-                Here are some of the interesting projects I have worked on. When working on an application, my 2 main outlooks are <i>simplicity and resource management</i>. I also pay close attention to the <i>cosmetics, reliability and responsiveness</i>. As for the code I try to make it <i>resusable, easily maintainable</i> and modular wherever I can. There are times when I face <kbd>just-want-to-get-done-with-it</kbd> situations (which programmer doesn't?) I curse myself for that and I come back later and refactor wherever needed.</p></br>
-                <p style="text-align:left;"><code style="color:grey;">mouseover</code> for more informaiton</p>
-                <ul id=projList style="text-align:left;">
-                    <li><span class = "project-targets" id="project-target-1">Kinect Media Controller</span>
-                        <div id="project-content-1">A gesture recognizer for Kinect to be integrated with media players to allow controls like
-                        play/pause/stop/enlarge and others through hand gestures.</div>
-                    </li>
-                    <li><span class = "project-targets" id="project-target-2">SongFinder</span>
-                        <div id="project-content-2">A lyrics search engine using BM25 retrieval formula with Rocchio feedback, also implemented dot
-                        clustering, query likelihood methods for experience, user also gets a link to the specific song on YouTube, this was
-                        achieved with YouTube API. This was done on LemurfCGI search engine template.</div>
-                    </li>
-                    <li><span class = "project-targets" id="project-target-3">DebtManager</span>
-                        <div id="project-content-3">An iOS application on to help students, friends and people with informal/casual debts.</div>
-                    </li>
-                    <li><span class = "project-targets" id="project-target-4">VoIP for Musicians</span>
-                        <div id="project-content-4">A VoIP application from scratch in Python, using a SIP library (PJSip). The idea is to help musicians jam
-                        online; we plan on minimizing the latency issues by compressing the audio before dispatch.</div>
-                    </li>
-                </ul>
-                <p>
-                You can read/fork the above projects and a few others on <a href="http://www.github.com/darshan104"target="_blank">Github</a>. There are a few others you can read about on my <a href="resume.pdf" target="_blank">resume</a>, get in touch if you want to talk about any one of them or just nerdy stuff.
-                </p>
-
-            </div>
-
-            <div id="contactWindow" class="area" align="center">
-                <p id="contact">I usually hangout all over the place. I don't get as much time as I wish I could to update my <a href="http://blog.darshansanghani.com" target="_blank">blog</a> regularly; but I am on my email way more than I like and I usually respond within 24 hours.</br></br> Other than that you can find me reading/answering questions on <b>Quora</b>- <a href="http://www.quora.com/Darshan-Sanghani"target="_blank"><img src="images/quora.png"></img></a>, taking a look at various doubts on <b>StackOverflow</b>- <a href="http://stackoverflow.com/users/614887/dtx"target="_blank"><img src="images/stackoverflow.png"/></a>, reading the latest news in the techsphere at <b>HackerNews</b>- <a href="http://news.ycombinator.com/user?id=dtx"target="_blank"><img src="images/y_combinator.png"/></a>, tweeting stuff about my love/life/sports/whatnot on <b>Twitter</b>- <a href="http://www.twitter.com/darshan104"target="_blank"><img src="images/twitter.png"/></a>, or just chilling on <b>LinkedIn</b>- <a href="http://www.linkedin.com/in/darshan104"target="_blank"><img src="images/linkedin.png"/></a>.</br></br>
-                My email address is <a href="mailto:dsangha2@illinois.edu">dsangha2@illinois.edu</a>
-                </p>
-            </div>
+        <div class='span7'>
+          <div class='hero-unit'>
+            <p id='midText'></p>
+          </div>
         </div>
+          <div class='span2'>
+            <code>github handle: <a href='http://www.github.com/dtx'<span class='label label-info'>dtx</span></a></code>
+            <hr class = 'seperator'>
+            <code>IRC handle: <span class="label label-success">retrobaby</span></code>
+            <hr class = 'seperator'>
+            <code>Projects language color scheme:</code><br>
+            <span class="label label-info">JavaScript</span> </span>
+            <span class="label label-inverse">Objective-C</span> </span>
+            <span class="label label-important">C++</span> </span>
+            <span class="label label-success">Python</span> </span>
+            <span class="label label-warning">Others</span> </span>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class='footer'>
+        <p id='footerText'>&copy; Darshan Sanghani. This website is built on <a target='_blank' href='http://www.backbonejs.org'>backbone.js</a>, <a target='_blank'href='http://www.underscorejs.org'>underscore.js</a>, <a target='_blank' href='http://twitter.github.com/bootstrap'>twitter-bootstrap</a>, on a good weeekend with an expresso.</p>
+      </div>
+    </div>
 
-
-        <p id="name">Darshan</br><span id = "last">Sanghani</span></p>
-        <img id="glider" src="images/glider.png"/>
-        <img id="imgaboutme"  class="helpers" style="display: none;"src="images/aboutme.png"/>
-        <img id="imgprojects"  class="helpers" style="display: none;"src="images/projects.png"/>
-        <img id="imgcontact"  class="helpers" style="display: none;"src="images/contact.png"/>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/ui/jquery-ui.min.js"></script>
-
-	<!--<script src="js/ui/jquery.ui.core.min.js"></script>
-    <script src="js/ui/jquery.ui.widget.min.js"></script>
-    <script src="js/ui/jquery.ui.mouse.min.js"></script>
-    <script src="js/ui/jquery.ui.draggable.min.js"></script>
-    <script src="js/ui/jquery.ui.droppable.min.js"></script>-->
-    <script src="js/jquery.ezpz_tooltip.min.js" type="text/javascript"></script>
-    <script src="js/ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-    <script src="js/draggable.js"></script>
-    <script>
-    $(document).ready(function(){
-	if($(window).width() < 800){
-	    $("#name").remove();
-	}
-        $("#name").fadeIn('fast');
-        $(".project-targets").ezpz_tooltip();
-        //insert code here
-        $(".helpers").fadeIn('fast');
-        $("#audio").volume = 0.3;
-    });
+   <script type='text/template' id='aboutMeTemplate'>
+      <ul class='unstyled'>
+      <li style="font-size:16px"><strong><%=work%></strong></li>
+        <li><%=about%></li>
+      </ul>
     </script>
 
+    <script type='text/template' id='menuTemplate'>
+      <ul class="nav nav-pills nav-stacked">
+        <li id='link1'><a href='#'><%=link1%></a></li>
+        <li id='link2'><a href='#'><%=link2%></a></li>
+        <li id='link3'><a href='#'><%=link3%></a></li>
+        <li id='link4'><a href='#'><%=link4%></a></li>
+      </ul>
+    </script>
+    <script type='text/template' id='gitTemplate'>
+        <ul class='aRepo' id='repo_<%=id%>'>
+          <li class='repoName'><%=name%></li>
+          <li class='repoDescription'><%=description%></li>
+          <% if (obj.language === "C++") { %>
+            <a class='btn btn-danger' href='<%=html_url%>'>View Details</a>
+          <% } else if (obj.language === "JavaScript") { %>
+            <a class='btn btn-primary' href='<%=html_url%>'>View Details</a>
+          <% } else if (obj.language === "Objective-C") { %>
+            <a class='btn btn-inverse' href='<%=html_url%>'>View Details</a>
+          <% } else if (obj.language === "Python") { %>
+            <a class='btn btn-success' href='<%=html_url%>'>View Details</a>
+          <% } else {%>
+            <a class='btn btn-warning' href='<%=html_url%>'>View Details</a>
+          <% } %>
+        </ul>
+        <hr>
+    </script>
+    <script type='text/javascript' src='js/models/gitModel.js'></script>
+    <script type='text/javascript' src='js/models/Menu.js'></script>
+    <script type='text/javascript' src='js/models/Portfolio.js'></script>
+    <script type='text/javascript' src='js/views/aboutmeView.js'></script>
+    <script type='text/javascript' src='js/views/menuView.js'></script>
+    <script type='text/javascript' src='js/views/gitView.js'></script>
+    <script type='text/javascript' src='js/collection.js'></script>
+    <script type='text/javascript' src='js/events.js'></script>
   </body>
 </html>
