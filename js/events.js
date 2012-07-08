@@ -15,7 +15,7 @@ Backbone.pubSub = _.extend({}, Backbone.Events);
           });
       }
       else{
-        $.getJSON('http://api.github.com/users/dtx/repos', function(data){
+        $.getJSON('https://api.github.com/users/dtx/repos', function(data){
         //$.getJSON('http://search.twitter.com/search.json?callback=?&q=arsene', function(data){
           //i know for...in is bad for arrays and Strings, but idc atm.
           for( var i in data){
