@@ -10,7 +10,7 @@ window.data1;
     Backbone.pubSub.on('linkClicked', function(link){
       if(link !== 'link2'){
         $('#projectsHelper').fadeOut();
-        $('#projectsAlert').fadeIn();
+        $('#projectsAlert').fadeOut();
         $.getJSON(link+'.json', function(data){
           console.log(data[0].content);
           $('#midText').append(data[0].content);
@@ -34,6 +34,7 @@ window.data1;
           });
         }
        else{
+          $('#projectsAlert').fadeOut();
           for( var i in window.data1){
               var repo = new gitModel(window.data1[i]);
               var gitV = new gitView({model:repo});
