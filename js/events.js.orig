@@ -16,7 +16,16 @@ window.data1;
           });
       }
       else{
+<<<<<<< HEAD
+        //$.getJSON('https://api.github.com/users/dtx/repos', function(data)
         $('#projectsHelper').fadeToggle();
+        $.getJSON('http://search.twitter.com/search.json?callback=?&q=arsene', function(data){
+          //i know for...in is bad for arrays and Strings, but idc atm.
+          for( var i in data){
+            var repo = new gitModel(data[i]);
+            var gitV = new gitView({model:repo});
+            gitV.render();
+=======
         if(window.data1 === undefined){
           $.getJSON('https://api.github.com/users/dtx/repos?callback=?', function(data){
             //i know for...in is bad for arrays and Strings, but idc atm.
@@ -35,6 +44,7 @@ window.data1;
               var repo = new gitModel(window.data1[i]);
               var gitV = new gitView({model:repo});
               gitV.render();
+>>>>>>> a9f565a6e6df55da794a175e73b639632a15be21
           }
           $('#midText').fadeIn();
        }
