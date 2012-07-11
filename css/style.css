@@ -8,6 +8,9 @@ body {
     background-repeat:repeat-x;
 }
 
+#projectsAlert{
+    display: none;
+}
 #projectsHelper{
     display:none;
 }

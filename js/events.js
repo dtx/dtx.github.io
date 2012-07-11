@@ -19,6 +19,7 @@ window.data1;
       else{
         $('#projectsHelper').fadeIn();
         if(window.data1 === undefined){
+          $('#projectsAlert').fadeIn();
           $.getJSON('https://api.github.com/users/dtx/repos?callback=?', function(data){
             //i know for...in is bad for arrays and Strings, but idc atm.
             window.data1 = data.data;
