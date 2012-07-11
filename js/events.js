@@ -10,6 +10,7 @@ window.data1;
     Backbone.pubSub.on('linkClicked', function(link){
       if(link !== 'link2'){
         $('#projectsHelper').fadeOut();
+        $('#projectsAlert').fadeIn();
         $.getJSON(link+'.json', function(data){
           console.log(data[0].content);
           $('#midText').append(data[0].content);
