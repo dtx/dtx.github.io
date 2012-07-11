@@ -9,6 +9,7 @@ window.data1;
 
     Backbone.pubSub.on('linkClicked', function(link){
       if(link !== 'link2'){
+        $('#projectsHelper').fadeOut();
         $.getJSON(link+'.json', function(data){
           console.log(data[0].content);
           $('#midText').append(data[0].content);
@@ -16,7 +17,7 @@ window.data1;
           });
       }
       else{
-        $('#projectsHelper').fadeToggle();
+        $('#projectsHelper').fadeIn();
         if(window.data1 === undefined){
           $.getJSON('https://api.github.com/users/dtx/repos?callback=?', function(data){
             //i know for...in is bad for arrays and Strings, but idc atm.
